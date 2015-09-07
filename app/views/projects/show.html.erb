@@ -1,6 +1,16 @@
 <% title(@project.name, "Projects") %>
 
-<%= link_to "Edit Project", edit_project_path(@project) %>
-<%= link_to "Delete Project", project_path(@project), method: :delete %>
-<h1><%= @project.name %></h1>
-<p><%= @project.description %></p> 
+<header>
+<h1>
+  <%= @project.name %>
+</h1>
+
+<ul class="actions">
+  <li>
+    <%= link_to "Edit Project", edit_project_path(@project), class: "edit" %>
+  </li>
+  <li>
+    <%= link_to "Delete Project", project_path(@project), method: :delete, class: "delete" %>
+  </li>
+</ul>
+</header>
