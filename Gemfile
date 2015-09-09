@@ -33,7 +33,7 @@ gem 'scout_apm'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -57,4 +57,6 @@ group :test do
   gem 'factory_girl_rails', '~> 4.5'
 end
 
-
+group :production do
+  gem 'rails_12factor'
+end
